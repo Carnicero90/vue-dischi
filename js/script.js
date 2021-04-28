@@ -19,6 +19,7 @@ var app = new Vue({
         */
             return arr.sort((a, b) => a[value] - b[value])
         },
+
         selectGen(item) {
             // difficile commentare queste robe nello stesso modo in cui si commenta una funzione 'standalone'
             if (!this.genre || this.genre == 'all') {
@@ -41,7 +42,11 @@ var app = new Vue({
     }
 })
 
+  // ### FUNZIONI POTENZIALMENTE UTILI PER IL GIGAESERCIZIO DI DOMANI
 
+        // addGens(newArr) {
+        //     genres.add(...newArr.map((disc) => disc.genre))
+        // },
 
 /*
  * function (detailed!) description

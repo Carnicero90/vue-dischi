@@ -8,17 +8,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
         crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> -->
     <link rel="stylesheet" href="css/my_frame.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Spotter</title>
 </head>
 
 <body>
     <!-- VUE CONTAINER -->
     <div id="root">
         <!-- HEADER -->
-        <header>
+        <header class="bg-main">
             <div class="logo"><img src="img/download.png" alt=""></div>
 
         </header>
@@ -26,16 +28,22 @@
 
         <!-- MAIN -->
         <main>
-            <h1 class="test text-center">{{ test }}</h1>
-            <select name="genre-selector" id="genre-selector" v-model="genre" aria-label="Seleziona un genere">
-                <option value="" disabled selected hidden>Seleziona un genere</option>
-                <option  v-for="item in genres" :value="item">{{ item }}</option>
-                <option value="">All</option>
-            </select>
-            <!-- div.discs-list -->
+            <!-- section.selector -->
+            <section class="selector text-center">
+                <select name="genre-selector" id="genre-selector" v-model="genre" aria-label="Seleziona un genere"
+                    class="text-center">
+                    <option value="" disabled selected hidden>Seleziona un genere</option>
+                    <option v-for="item in genres" :value="item">{{ item }}</option>
+                    <option value="">All</option>
+                </select>
+            </section>
+            <!-- END section.selector -->
+
+            <!-- ul.discs-list -->
             <ul v-if="discs.length==10" class="discs-list flexer center wrap">
                 <!-- li.disc -->
-                <li v-for="item in discs" v-if="genre ? item.genre == genre : true" class="disc flexer col center-cross">
+                <li v-for="item in discs" v-if="genre ? item.genre == genre : true"
+                    class="disc bg-main flexer col center-cross">
                     <div class="cover">
                         <img :src="item.poster" alt="">
                     </div>
@@ -49,13 +57,9 @@
                 </li>
                 <!-- END li.disc -->
             </ul>
-            <!-- END div.discs-list -->
-
+            <!-- END ul.discs-list -->
         </main>
         <!-- END MAIN -->
-
-        <!-- FOOTER -->
-        <!-- END FOOTER -->
     </div>
     <!-- END VUE CONTAINER -->
 

@@ -1,8 +1,15 @@
 /* COMMON
    ======================= */
-.test {
-   color: red;
+
+body {
+   background-color: #1e2e3c;
+   font-family: 'Roboto', sans-serif;
 }
+
+.bg-main {
+   background-color: #2e3b46;
+}
+
 /* ======================= */
 
 /* HEADER
@@ -10,50 +17,56 @@
 
 /*    * logo
       -------------------- */
-.logo img {
-   width: 100px;
+header {
+   padding: 10px 20px;
 }
+.logo img {
+   width: 80px;
+}
+
 /*    -------------------- */
 
 /* ======================= */
-
 
 /* MAIN
    ======================= */
 
+/*    * selector
+      -------------------- */
+.selector {
+   padding-top:20px;
+   padding-bottom: 20px;
+}
+/*    -------------------- */
+
 /*    * disc
       -------------------- */
+
 .disc {
    /* test */
-   width: 15%;
+   width: calc(100%/8);
+   padding: 10px;
+   margin-right: 1rem;
+   color: #7e7e7e;
+   margin-bottom: 0.8rem;
 }
+
 .disc .cover {
    /* test */
    width: 100%;
 }
+
 .disc .title {
    text-transform: uppercase;
-   font-size: 1.5rem;
+   font-size: 1.2rem;
+   color: white;
+   padding-bottom: 1rem;
+   font-weight: 500;
 }
-/*    -------------------- */
-
-/* ======================= */
-
-
-/* FOOTER
-   ======================= */
-
-/*    * stuff
-      -------------------- */
 
 /*    -------------------- */
 
 /* ======================= */
-
-
-
-
-
 
 /* TEMPLATE
    ======================= */

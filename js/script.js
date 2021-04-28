@@ -32,7 +32,7 @@ var app = new Vue({
     
 
     mounted() {
-        this.discs = axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+        axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((response) => {
                 this.discs = response.data.response; //array of objects
                 this.sortArrByValue(this.discs, 'year');

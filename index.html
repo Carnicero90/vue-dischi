@@ -32,7 +32,7 @@
             <section class="selector text-center">
                 <select name="genre-selector" id="genre-selector" v-model="genre" aria-label="Seleziona un genere"
                     class="text-center">
-                    <option value="" disabled selected hidden>Seleziona un genere</option>
+                    <option value="" disabled selected hidden aria-hidden="true">Seleziona un genere</option>
                     <option v-for="item in genres" :value="item">{{ item }}</option>
                     <option value="">All</option>
                 </select>
@@ -45,7 +45,7 @@
                 <li v-for="item in discs" v-if="genre ? item.genre == genre : true"
                     class="disc bg-main flexer col center-cross">
                     <div class="cover">
-                        <img :src="item.poster" alt="">
+                        <img :src="item.poster" :alt="item.title + '\'s cover'">
                     </div>
                     <!-- ul.info-list -->
                     <ul class="info-list text-center">

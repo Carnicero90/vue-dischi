@@ -34,7 +34,7 @@
                     class="text-center">
                     <option value="" disabled selected hidden aria-hidden="true">Seleziona un genere</option>
                     <option v-for="item in genres" :value="item">{{ item }}</option>
-                    <option value="">All</option>
+                    <option value="all">All</option>
                 </select>
             </section>
             <!-- END section.selector -->
@@ -42,7 +42,7 @@
             <!-- ul.discs-list -->
             <ul v-if="discs.length > 0" v-cloak class="discs-list flexer center wrap">
                 <!-- li.disc -->
-                <li v-for="item in discs" v-if="genre ? item.genre == genre : true"
+                <li v-for="item in discs" v-if="selectGen(item)"
                     class="disc bg-main flexer col center-cross">
                     <div class="cover">
                         <img :src="item.poster" :alt="item.title + '\'s cover'">

@@ -18,8 +18,18 @@ var app = new Vue({
         * @return || sorted array
         */
             return arr.sort((a, b) => a[value] - b[value])
+        },
+        selectGen(item) {
+            // difficile commentare queste robe nello stesso modo in cui si commenta una funzione 'standalone'
+            if (!this.genre || this.genre == 'all') {
+                return true
+            }
+            else {
+                return item.genre == this.genre
+            }
         }
     },
+    
 
     mounted() {
         this.discs = axios.get('https://flynn.boolean.careers/exercises/api/array/music')

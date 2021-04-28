@@ -29,14 +29,14 @@
         <!-- MAIN -->
         <main>
             <!-- section.selector -->
-            <section class="selector text-center">
+            <div class="selector text-center">
                 <select name="genre-selector" id="genre-selector" v-model="genre" aria-label="Seleziona un genere"
                     class="text-center">
-                    <option value="" disabled selected hidden aria-hidden="true">Seleziona un genere</option>
+                    <option value="" disabled selected hidden>Seleziona un genere</option>
                     <option v-for="item in genres" :value="item">{{ item }}</option>
                     <option value="all">All</option>
                 </select>
-            </section>
+            </div>
             <!-- END section.selector -->
 
             <!-- ul.discs-list -->

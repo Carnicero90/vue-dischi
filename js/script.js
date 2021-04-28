@@ -1,10 +1,9 @@
 var app = new Vue({
     el: '#root',
     data: {
-        test: 'hello Template',
-        discs: [],
-        genres: [],
-        genre: ''
+        discs: [], //filled on mounted() by axios.get on api/array/music, contains an array of objects
+        genres: [], //filled on mounted(), contains a set of every item.genre for item in discs
+        genre: '' //default genre, changes according to select options in index.html line 33-38
     },
     methods: {
 
@@ -35,7 +34,7 @@ var app = new Vue({
     mounted() {
         this.discs = axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((response) => {
-                this.discs = response.data.response;
+                this.discs = response.data.response; //array of objects
                 this.sortArrByValue(this.discs, 'year');
                 this.genres = new Set(this.discs.map((disc) => disc.genre))
             })

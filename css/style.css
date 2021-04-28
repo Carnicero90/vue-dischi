@@ -4,6 +4,8 @@
 body {
    background-color: #1e2e3c;
    font-family: 'Roboto', sans-serif;
+   max-width: 1170px;
+   margin: auto;
 }
 
 .bg-main {
@@ -54,6 +56,7 @@ header {
 .disc .cover {
    /* test */
    width: 100%;
+   padding-bottom: 1rem;
 }
 
 .disc .title {
@@ -68,12 +71,25 @@ header {
 
 /* ======================= */
 
-/* TEMPLATE
+/* QUERIES */
+
+/* width < 800px
    ======================= */
+   @media screen and (max-width: 799px) {
 
-/*    * stuff
+
+
+/*    * disc
       -------------------- */
-
+.disc {
+   width: calc(100%/5)
+}
+.disc .title {
+   font-size: 90%
+}
 /*    -------------------- */
+
+   }
+
 
 /* ======================= */

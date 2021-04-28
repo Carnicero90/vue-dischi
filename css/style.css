@@ -12,6 +12,10 @@ body {
    background-color: #2e3b46;
 }
 
+[v-cloak] {
+   display: none;
+}
+
 /* ======================= */
 
 /* HEADER
@@ -19,9 +23,11 @@ body {
 
 /*    * logo
       -------------------- */
+
 header {
    padding: 10px 20px;
 }
+
 .logo img {
    width: 80px;
 }
@@ -35,10 +41,12 @@ header {
 
 /*    * selector
       -------------------- */
+
 .selector {
-   padding-top:20px;
+   padding-top: 20px;
    padding-bottom: 20px;
 }
+
 /*    -------------------- */
 
 /*    * disc
@@ -75,21 +83,17 @@ header {
 
 /* width < 800px
    ======================= */
-   @media screen and (max-width: 799px) {
 
-
-
-/*    * disc
+@media screen and (max-width: 799px) {
+   /*    * disc
       -------------------- */
-.disc {
-   width: calc(100%/5)
-}
-.disc .title {
-   font-size: 90%
-}
-/*    -------------------- */
-
+   .disc {
+      width: calc(100%/5)
    }
-
+   .disc .title {
+      font-size: 90%
+   }
+   /*    -------------------- */
+}
 
 /* ======================= */

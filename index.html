@@ -40,9 +40,9 @@
             <!-- END section.selector -->
 
             <!-- ul.discs-list -->
-            <ul v-if="discs.length==10" class="discs-list flexer center wrap">
+            <ul v-if="discs.length==10" v-cloak class="discs-list flexer center wrap">
                 <!-- li.disc -->
-                <li v-for="item in discs" v-if="genre ? item.genre == genre : true"
+                <li v-for="item in discs" v-if="discs" v-if="genre ? item.genre == genre : true"
                     class="disc bg-main flexer col center-cross">
                     <div class="cover">
                         <img :src="item.poster" alt="">
